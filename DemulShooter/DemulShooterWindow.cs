@@ -1160,16 +1160,28 @@ namespace DemulShooter
                 if (!_Game.ClientScale(Player))
                 {
                     Logger.WriteLog("Error converting screen location to client location");
-                    return;
+                    if (Player.RIController.Computed_Buttons == 0)
+                        return;
+                    // Button events present: fall back to screen dimensions so SendInput still fires
+                    Logger.WriteLog("Button events pending, falling back to screen coordinates");
+                    Rect r = new Rect();
+                    r.Top = 0;
+                    r.Left = 0;
+                    r.Bottom = _Game.ScreenHeight;
+                    r.Right = _Game.ScreenWidth;
+                    _Game.ClientRect = r;
                 }
-                Logger.WriteLog("ClientWindow Location (px) = [ " + _Game.clientWindowLocation.X.ToString() + ", " + _Game.clientWindowLocation.Y.ToString() + " ]");
-                Logger.WriteLog("ClientWindow Size (px) = [ " + (_Game.WindowRect.Right - _Game.WindowRect.Left).ToString() + "x" + (_Game.WindowRect.Bottom - _Game.WindowRect.Top).ToString() + " ]");
-                Logger.WriteLog("OnClient Cursor Position (Px) = [ " + Player.RIController.Computed_X + ", " + Player.RIController.Computed_Y + " ]");
-
-                if (!_Game.GetClientRect())
+                else
                 {
-                    Logger.WriteLog("Error getting client Rect");
-                    return;
+                    Logger.WriteLog("ClientWindow Location (px) = [ " + _Game.clientWindowLocation.X.ToString() + ", " + _Game.clientWindowLocation.Y.ToString() + " ]");
+                    Logger.WriteLog("ClientWindow Size (px) = [ " + (_Game.WindowRect.Right - _Game.WindowRect.Left).ToString() + "x" + (_Game.WindowRect.Bottom - _Game.WindowRect.Top).ToString() + " ]");
+                    Logger.WriteLog("OnClient Cursor Position (Px) = [ " + Player.RIController.Computed_X + ", " + Player.RIController.Computed_Y + " ]");
+
+                    if (!_Game.GetClientRect())
+                    {
+                        Logger.WriteLog("Error getting client Rect");
+                        return;
+                    }
                 }
             }
             else
@@ -1186,6 +1198,12 @@ namespace DemulShooter
             if (!_Game.GameScale(Player))
             {
                 Logger.WriteLog("Error converting client location to game location");
+                if (Player.RIController.Computed_Buttons == 0)
+                    return;
+                // Button events present: call SendInput anyway so button state is applied
+                Logger.WriteLog("Button events pending, calling SendInput despite GameScale failure");
+                if (!_NoInput)
+                    _Game.SendInput(Player);
                 return;
             }
 
