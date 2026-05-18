@@ -2,7 +2,7 @@ name: Build Windows Executables
 
 on:
   push:
-    branches: [master]
+    branches: [master, tcpinput]
   workflow_dispatch:
 
 jobs:
