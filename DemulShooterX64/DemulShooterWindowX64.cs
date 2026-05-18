@@ -933,10 +933,7 @@ namespace DemulShooterX64
 
                 if (!_Game.ClientScale(Player))
                 {
-                    Logger.WriteLog("Error converting screen location to client location");
-                    if (Player.RIController.Computed_Buttons == 0)
-                        return;
-                    Logger.WriteLog("Button events pending, falling back to screen coordinates");
+                    Logger.WriteLog("Error converting screen location to client location - falling back to screen coordinates");
                     Rect r = new Rect();
                     r.Top = 0;
                     r.Left = 0;
@@ -969,9 +966,6 @@ namespace DemulShooterX64
             if (!_Game.GameScale(Player))
             {
                 Logger.WriteLog("Error converting client location to game location");
-                if (Player.RIController.Computed_Buttons == 0)
-                    return;
-                Logger.WriteLog("Button events pending, calling SendInput despite GameScale failure");
                 if (!_NoInput)
                     _Game.SendInput(Player);
                 return;
