@@ -185,9 +185,9 @@ namespace DemulShooter
                 if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.OnScreenTriggerUp) != 0)
                     Apply_OR_ByteMask(_Buttons_CaveAddress, 0x01);
 
-                if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.ActionDown) != 0)
+                if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.OffScreenTriggerDown) != 0)
                     Apply_AND_ByteMask(_Buttons_CaveAddress, 0xEF);
-                if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.ActionUp) != 0)
+                if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.OffScreenTriggerUp) != 0)
                     Apply_OR_ByteMask(_Buttons_CaveAddress, 0x10);
             }
             else if (PlayerData.ID == 2)
@@ -200,9 +200,9 @@ namespace DemulShooter
                 if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.OnScreenTriggerUp) != 0)
                     Apply_OR_ByteMask(_Buttons_CaveAddress, 0x02);
 
-                if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.ActionDown) != 0)
+                if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.OffScreenTriggerDown) != 0)
                     Apply_AND_ByteMask(_Buttons_CaveAddress, 0xDF);
-                if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.ActionUp) != 0)
+                if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.OffScreenTriggerUp) != 0)
                     Apply_OR_ByteMask(_Buttons_CaveAddress, 0x20);
             }
         }
