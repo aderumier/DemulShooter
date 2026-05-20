@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using DsCore;
 using DsCore.Config;
 using DsCore.MameOutput;
+using DsCore.RawInput;
 
 namespace DemulShooter
 {
@@ -12,11 +13,13 @@ namespace DemulShooter
     {     
         /*** MEMORY ADDRESSES **/
         private UInt32 _Axis_Injection_Offset = 0x000C8937;
+        private UInt32 _Buttons_Injection_Offset = 0x000C88F0;
         private UInt32 _P1_X_CaveAddress;
         private UInt32 _P1_Y_CaveAddress;
         private UInt32 _P2_X_CaveAddress;
         private UInt32 _P2_Y_CaveAddress;
-   
+        private UInt32 _Buttons_CaveAddress;
+
         //Outputs
         //private UInt32 _OutputsPtr_Offset = 0x001AA730;
         private UInt32 _PlayerStructPtr_Offset = 0x001AA8F4;
@@ -142,13 +145,19 @@ namespace DemulShooter
             _P2_X_CaveAddress = _InputsDatabank_Address + 1;
             _P1_Y_CaveAddress = _InputsDatabank_Address + 2;
             _P2_Y_CaveAddress = _InputsDatabank_Address + 3;
+            _Buttons_CaveAddress = _InputsDatabank_Address + 8;
 
-            //Axis : The game is reading axis values. Replacing the real address with our own
-            byte[] b = BitConverter.GetBytes(_P1_X_CaveAddress);
+            //Buttons : The game is reading the Byte containing Buttons info. Replacing the real address with our own
+            byte[] b = BitConverter.GetBytes(_Buttons_CaveAddress);
+            WriteBytes((UInt32)_TargetProcess_MemoryBaseAddress + _Buttons_Injection_Offset + 1, b);
+
+            //Axis : Same Thing
+            b = BitConverter.GetBytes(_P1_X_CaveAddress);
             WriteBytes((UInt32)_TargetProcess_MemoryBaseAddress + _Axis_Injection_Offset + 2, b);
 
             //Initial values
             WriteBytes(_P1_X_CaveAddress, new byte[] { 0x55, 0xAA, 0x7F, 0x7F });
+            WriteByte(_Buttons_CaveAddress, 0xFF);
 
             Logger.WriteLog("Inputs Memory Hack complete !");
             Logger.WriteLog("-");
@@ -170,11 +179,21 @@ namespace DemulShooter
             {
                 WriteByte(_P1_X_CaveAddress, bufferX[0]);
                 WriteByte(_P1_Y_CaveAddress, bufferY[0]);
+
+                if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.OnScreenTriggerDown) != 0)
+                    Apply_AND_ByteMask(_Buttons_CaveAddress, 0xFE);
+                if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.OnScreenTriggerUp) != 0)
+                    Apply_OR_ByteMask(_Buttons_CaveAddress, 0x01);
             }
             else if (PlayerData.ID == 2)
             {
                 WriteByte(_P2_X_CaveAddress, bufferX[0]);
                 WriteByte(_P2_Y_CaveAddress, bufferY[0]);
+
+                if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.OnScreenTriggerDown) != 0)
+                    Apply_AND_ByteMask(_Buttons_CaveAddress, 0xFD);
+                if ((PlayerData.RIController.Computed_Buttons & RawInputcontrollerButtonEvent.OnScreenTriggerUp) != 0)
+                    Apply_OR_ByteMask(_Buttons_CaveAddress, 0x02);
             }
         }
 
