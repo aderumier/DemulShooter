@@ -354,7 +354,16 @@ namespace DemulShooter
                             {
                                 _Game = new Game_ArcadepcGhostBusters(_Rom.ToLower());
                             } break;
-
+                        case "hsfr":
+                            {
+                                _Game = new Game_ArcadepcHsfr(_Rom.ToLower());
+                            }
+                            break;
+                        case "mecht":
+                            {
+                                _Game = new Game_ArcadepcMechaTornado(_Rom.ToLower());
+                            }
+                            break;
                         case "pvz":
                             {
                                 _Game = new Game_ArcadepcPvzLastStand(_Rom.ToLower());
@@ -828,15 +837,7 @@ namespace DemulShooter
                             {
                                 _Game = new Game_ArcadepcFireHero(_Rom.ToLower());
                             }
-                            break;
-                        case "hsfr":
-                            {
-                                _Game = new Game_ArcadepcHsfr(_Rom.ToLower());
-                            }break;
-                        case "mecht":
-                            {
-                                _Game = new Game_ArcadepcMechaTornado(_Rom.ToLower());
-                            }break;
+                            break; 
                         case "topgun":
                             {
                                 _Game = new Game_ArcadepcTopGun(_Rom.ToLower());

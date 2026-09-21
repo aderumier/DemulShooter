@@ -54,6 +54,7 @@ namespace DemulShooterX64
                 {"drk", "Drakon Realm Keepers"},
                 {"eai","Elevator Action invasion"},                
                 {"marss", "Mars Sortie"},
+                {"mechd", "Mechanical Dinosaur"},
                 {"mib", "Men In Black"},
                 {"misimp", "Mission Impossible Arcade"},
                 {"nha","Night Hunter"},

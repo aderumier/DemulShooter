@@ -50,6 +50,7 @@ namespace DemulShooterX64.Games
             : base(RomName, "game", "RobotDragon")
         {
             _KnownMd5Prints.Add("Mechanical Dinosaur v6.5 - Original", "25dd74d2eeef2f61ed32ce439bcd264a");
+            _KnownMd5Prints.Add("Mechanical Dinosaur v6.5 - Patched by SpiderZSoft", "bda88c575a80d789ea1c9860e088ac51");
 
             _InputData = new InputData(MAX_PLAYERS);
             _OutputData = new OutputData(MAX_PLAYERS);

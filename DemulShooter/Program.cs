@@ -58,6 +58,8 @@ namespace DemulShooter
 
             Dictionary<String, String> _ArcadepcRoms = new Dictionary<String, String>(){
                 {"gbusters","Ghostbusters"},
+                {"hsfr","Hot Shots Fire Rescue"},
+                {"mecht","Mecha Tornado Arcade"},
                 {"pvz","Plants VS Zombies : The Last stand"},
                 {"rhood", "Robin Hood"},
                 {"wws","Wild West Shootout"}

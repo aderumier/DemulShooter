@@ -44,7 +44,8 @@ namespace DemulShooter
         public Game_ArcadepcHsfr(String RomName)
             : base(RomName, "FireHero")
         {
-            _KnownMd5Prints.Add("Hot Shots Fire Rescue - v3.3.20221123r.60.1PUMP", "eec51a30066a2a19fa7d3ad494518eab");
+            _KnownMd5Prints.Add("Hot Shots Fire Rescue - v3.3.20221123r.60.1PUMP original dll", "eec51a30066a2a19fa7d3ad494518eab");
+            _KnownMd5Prints.Add("Hot Shots Fire Rescue - v3.3.20221123r.60.1PUMP unpacked dll from SpiderZSoft", "bda23dea9d914d2992520748ca6ed1db");
             _tProcess.Start();
             Logger.WriteLog("Waiting for Coastal " + _RomName + " game to hook.....");
         }
