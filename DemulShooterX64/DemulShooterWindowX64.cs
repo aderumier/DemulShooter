@@ -280,6 +280,10 @@ namespace DemulShooterX64
                 {
                     switch (_Rom.ToLower())
                     {
+                        case "dino":
+                            {
+                                _Game = new Game_ArcadepcDinoInvasion(_Rom.ToLower());
+                            }break;
                         case "drk":
                             {
                                 _Game = new Game_ArcadepcDrakon(_Rom.ToLower());
@@ -325,6 +329,10 @@ namespace DemulShooterX64
                         case "tra":
                             {
                                 _Game = new Game_ArcadepcTra(_Rom.ToLower());
+                            }; break;
+                        case "wzombies":
+                            {
+                                _Game = new Game_ArcadepcWisdomZombies(_Rom.ToLower());
                             }; break;
                     }
                 }
@@ -469,11 +477,7 @@ namespace DemulShooterX64
                         case "drakon":
                             {
                                 _Game = new Game_ArcadepcDrakon_NoPlugin(_Rom.ToLower());
-                            }; break;
-                        case "dino":
-                            {
-                                _Game = new Game_ArcadepcDinoInvasion(_Rom.ToLower());
-                            }; break;                        
+                            }; break;                                           
                         case "onept":
                             {
                                 _Game = new Game_ArcadepcOnePoint(_Rom.ToLower());
@@ -483,12 +487,6 @@ namespace DemulShooterX64
                                 _Game = new Game_ArcadepcTopGun2(_Rom.ToLower());
                             }
                             ; break;
-                        case "wzombies":
-                            {
-                                _Game = new Game_ArcadepcWisdomZombies(_Rom.ToLower());
-                            }; break;
-
-
                         case "be":
                             {
                                 _Game = new Game_WndBlueEstate(_Rom.ToLower());

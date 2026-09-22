@@ -1006,6 +1006,7 @@ namespace DemulShooter_GUI
             switch (Btn.Name)
             {
                 case "Btn_Dcop": SrcUnityFolder = "DCOP"; break;
+                case "Btn_DinoInv": SrcUnityFolder = "DinoInvasion"; break;
                 case "Btn_Drk": SrcUnityFolder = "Drakon"; break;
                 case "Btn_MarsS": SrcUnityFolder = "MarsSortie"; break;
                 case "Btn_MechT": SrcUnityFolder = "MechaTornado"; break;
@@ -1021,6 +1022,7 @@ namespace DemulShooter_GUI
                 case "Btn_Skos": SrcUnityFolder = "SkullOfShadow"; break;
                 case "Btn_Tra": SrcUnityFolder = "TombRaider"; break;
                 case "Btn_Wws": SrcUnityFolder = "WildWestShootout"; break;
+                case "Btn_Wisdom": SrcUnityFolder = "WisdomZombies"; break;
                 default: break;
             }
 
