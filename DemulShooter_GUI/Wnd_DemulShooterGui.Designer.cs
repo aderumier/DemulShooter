@@ -208,21 +208,24 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TXT_P2_T = new System.Windows.Forms.TextBox();
             this.Tab_UnityPlugins = new System.Windows.Forms.TabPage();
-            this.Btn_Skos = new System.Windows.Forms.Button();
-            this.label36 = new System.Windows.Forms.Label();
-            this.Btn_Wws = new System.Windows.Forms.Button();
-            this.Btn_Pbx = new System.Windows.Forms.Button();
-            this.Btn_Tra = new System.Windows.Forms.Button();
-            this.Btn_Rha = new System.Windows.Forms.Button();
-            this.Btn_PvZ = new System.Windows.Forms.Button();
-            this.Btn_Owr = new System.Windows.Forms.Button();
-            this.Btn_Nha = new System.Windows.Forms.Button();
-            this.Btn_Nerfa = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Btn_Dcop = new System.Windows.Forms.Button();
+            this.Btn_Drk = new System.Windows.Forms.Button();
+            this.Btn_MarsS = new System.Windows.Forms.Button();
+            this.Btn_MechT = new System.Windows.Forms.Button();
+            this.Btn_MechD = new System.Windows.Forms.Button();
             this.Btn_Mia = new System.Windows.Forms.Button();
             this.Btn_Mib = new System.Windows.Forms.Button();
-            this.Btn_MarsS = new System.Windows.Forms.Button();
-            this.Btn_Drk = new System.Windows.Forms.Button();
-            this.Btn_Dcop = new System.Windows.Forms.Button();
+            this.Btn_Nerfa = new System.Windows.Forms.Button();
+            this.Btn_Nha = new System.Windows.Forms.Button();
+            this.Btn_Owr = new System.Windows.Forms.Button();
+            this.Btn_PvZ = new System.Windows.Forms.Button();
+            this.Btn_Pbx = new System.Windows.Forms.Button();
+            this.Btn_Rha = new System.Windows.Forms.Button();
+            this.Btn_Skos = new System.Windows.Forms.Button();
+            this.Btn_Tra = new System.Windows.Forms.Button();
+            this.Btn_Wws = new System.Windows.Forms.Button();
+            this.label36 = new System.Windows.Forms.Label();
             this.Tab_Outputs = new System.Windows.Forms.TabPage();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.Rdo_OutputsNetwork = new System.Windows.Forms.RadioButton();
@@ -246,9 +249,8 @@
             this.Bgw_XInput = new System.ComponentModel.BackgroundWorker();
             this.Cbo_PageSettings = new System.Windows.Forms.ComboBox();
             this.label39 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Btn_MechT = new System.Windows.Forms.Button();
-            this.Btn_MechD = new System.Windows.Forms.Button();
+            this.Btn_DinoInv = new System.Windows.Forms.Button();
+            this.Btn_Wisdom = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Tab_P1.SuspendLayout();
             this.Tab_P2.SuspendLayout();
@@ -285,10 +287,10 @@
             this.groupBox12.SuspendLayout();
             this.Tab_SHA.SuspendLayout();
             this.Tab_UnityPlugins.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.Tab_Outputs.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.Grp_Outputs.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_Save_P1
@@ -2389,170 +2391,31 @@
             this.Tab_UnityPlugins.Text = "tabPage1";
             this.Tab_UnityPlugins.UseVisualStyleBackColor = true;
             // 
-            // Btn_Skos
+            // flowLayoutPanel1
             // 
-            this.Btn_Skos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_Skos.Location = new System.Drawing.Point(130, 172);
-            this.Btn_Skos.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Skos.Name = "Btn_Skos";
-            this.Btn_Skos.Size = new System.Drawing.Size(118, 48);
-            this.Btn_Skos.TabIndex = 87;
-            this.Btn_Skos.Text = "Skull Of Shadow";
-            this.Btn_Skos.UseVisualStyleBackColor = true;
-            this.Btn_Skos.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(5, 19);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(196, 16);
-            this.label36.TabIndex = 70;
-            this.label36.Text = "Select the Unity Plugin to install :";
-            // 
-            // Btn_Wws
-            // 
-            this.Btn_Wws.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_Wws.Location = new System.Drawing.Point(382, 172);
-            this.Btn_Wws.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Wws.Name = "Btn_Wws";
-            this.Btn_Wws.Size = new System.Drawing.Size(118, 48);
-            this.Btn_Wws.TabIndex = 86;
-            this.Btn_Wws.Text = "Wild West Shootout";
-            this.Btn_Wws.UseVisualStyleBackColor = true;
-            this.Btn_Wws.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // Btn_Pbx
-            // 
-            this.Btn_Pbx.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_Pbx.Location = new System.Drawing.Point(382, 116);
-            this.Btn_Pbx.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Pbx.Name = "Btn_Pbx";
-            this.Btn_Pbx.Size = new System.Drawing.Size(118, 48);
-            this.Btn_Pbx.TabIndex = 85;
-            this.Btn_Pbx.Text = "Point Blank X";
-            this.Btn_Pbx.UseVisualStyleBackColor = true;
-            this.Btn_Pbx.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // Btn_Tra
-            // 
-            this.Btn_Tra.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_Tra.Location = new System.Drawing.Point(256, 172);
-            this.Btn_Tra.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Tra.Name = "Btn_Tra";
-            this.Btn_Tra.Size = new System.Drawing.Size(118, 48);
-            this.Btn_Tra.TabIndex = 84;
-            this.Btn_Tra.Text = "Tomb Raider Arcade";
-            this.Btn_Tra.UseVisualStyleBackColor = true;
-            this.Btn_Tra.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // Btn_Rha
-            // 
-            this.Btn_Rha.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_Rha.Location = new System.Drawing.Point(4, 172);
-            this.Btn_Rha.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Rha.Name = "Btn_Rha";
-            this.Btn_Rha.Size = new System.Drawing.Size(118, 48);
-            this.Btn_Rha.TabIndex = 83;
-            this.Btn_Rha.Text = "Rabbids Hollywood";
-            this.Btn_Rha.UseVisualStyleBackColor = true;
-            this.Btn_Rha.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // Btn_PvZ
-            // 
-            this.Btn_PvZ.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_PvZ.Location = new System.Drawing.Point(256, 116);
-            this.Btn_PvZ.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_PvZ.Name = "Btn_PvZ";
-            this.Btn_PvZ.Size = new System.Drawing.Size(118, 48);
-            this.Btn_PvZ.TabIndex = 82;
-            this.Btn_PvZ.Text = "Plant VS Zombies";
-            this.Btn_PvZ.UseVisualStyleBackColor = true;
-            this.Btn_PvZ.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // Btn_Owr
-            // 
-            this.Btn_Owr.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_Owr.Location = new System.Drawing.Point(130, 116);
-            this.Btn_Owr.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Owr.Name = "Btn_Owr";
-            this.Btn_Owr.Size = new System.Drawing.Size(118, 48);
-            this.Btn_Owr.TabIndex = 81;
-            this.Btn_Owr.Text = "Operation Wolf\r\nReturn";
-            this.Btn_Owr.UseVisualStyleBackColor = true;
-            this.Btn_Owr.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // Btn_Nha
-            // 
-            this.Btn_Nha.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_Nha.Location = new System.Drawing.Point(4, 116);
-            this.Btn_Nha.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Nha.Name = "Btn_Nha";
-            this.Btn_Nha.Size = new System.Drawing.Size(118, 48);
-            this.Btn_Nha.TabIndex = 80;
-            this.Btn_Nha.Text = "Night Hunter";
-            this.Btn_Nha.UseVisualStyleBackColor = true;
-            this.Btn_Nha.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // Btn_Nerfa
-            // 
-            this.Btn_Nerfa.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_Nerfa.Location = new System.Drawing.Point(382, 60);
-            this.Btn_Nerfa.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Nerfa.Name = "Btn_Nerfa";
-            this.Btn_Nerfa.Size = new System.Drawing.Size(118, 48);
-            this.Btn_Nerfa.TabIndex = 79;
-            this.Btn_Nerfa.Text = "Nerf Arcade";
-            this.Btn_Nerfa.UseVisualStyleBackColor = true;
-            this.Btn_Nerfa.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // Btn_Mia
-            // 
-            this.Btn_Mia.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_Mia.Location = new System.Drawing.Point(130, 60);
-            this.Btn_Mia.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Mia.Name = "Btn_Mia";
-            this.Btn_Mia.Size = new System.Drawing.Size(118, 48);
-            this.Btn_Mia.TabIndex = 78;
-            this.Btn_Mia.Text = "Mission Impossible";
-            this.Btn_Mia.UseVisualStyleBackColor = true;
-            this.Btn_Mia.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // Btn_Mib
-            // 
-            this.Btn_Mib.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_Mib.Location = new System.Drawing.Point(256, 60);
-            this.Btn_Mib.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Mib.Name = "Btn_Mib";
-            this.Btn_Mib.Size = new System.Drawing.Size(118, 48);
-            this.Btn_Mib.TabIndex = 77;
-            this.Btn_Mib.Text = "M.I.B";
-            this.Btn_Mib.UseVisualStyleBackColor = true;
-            this.Btn_Mib.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // Btn_MarsS
-            // 
-            this.Btn_MarsS.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_MarsS.Location = new System.Drawing.Point(256, 4);
-            this.Btn_MarsS.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_MarsS.Name = "Btn_MarsS";
-            this.Btn_MarsS.Size = new System.Drawing.Size(118, 48);
-            this.Btn_MarsS.TabIndex = 76;
-            this.Btn_MarsS.Text = "Mars Sortie";
-            this.Btn_MarsS.UseVisualStyleBackColor = true;
-            this.Btn_MarsS.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // Btn_Drk
-            // 
-            this.Btn_Drk.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_Drk.Location = new System.Drawing.Point(130, 4);
-            this.Btn_Drk.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_Drk.Name = "Btn_Drk";
-            this.Btn_Drk.Size = new System.Drawing.Size(118, 48);
-            this.Btn_Drk.TabIndex = 75;
-            this.Btn_Drk.Text = "Drakon\r\nRealm Keeper";
-            this.Btn_Drk.UseVisualStyleBackColor = true;
-            this.Btn_Drk.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Dcop);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_DinoInv);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Drk);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_MarsS);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_MechT);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_MechD);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Mia);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Mib);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Nerfa);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Nha);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Owr);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_PvZ);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Pbx);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Rha);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Skos);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Tra);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Wws);
+            this.flowLayoutPanel1.Controls.Add(this.Btn_Wisdom);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 49);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(569, 278);
+            this.flowLayoutPanel1.TabIndex = 88;
             // 
             // Btn_Dcop
             // 
@@ -2565,6 +2428,195 @@
             this.Btn_Dcop.Text = "DCOP";
             this.Btn_Dcop.UseVisualStyleBackColor = true;
             this.Btn_Dcop.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_Drk
+            // 
+            this.Btn_Drk.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Drk.Location = new System.Drawing.Point(256, 4);
+            this.Btn_Drk.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Drk.Name = "Btn_Drk";
+            this.Btn_Drk.Size = new System.Drawing.Size(118, 48);
+            this.Btn_Drk.TabIndex = 75;
+            this.Btn_Drk.Text = "Drakon\r\nRealm Keeper";
+            this.Btn_Drk.UseVisualStyleBackColor = true;
+            this.Btn_Drk.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_MarsS
+            // 
+            this.Btn_MarsS.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_MarsS.Location = new System.Drawing.Point(382, 4);
+            this.Btn_MarsS.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_MarsS.Name = "Btn_MarsS";
+            this.Btn_MarsS.Size = new System.Drawing.Size(118, 48);
+            this.Btn_MarsS.TabIndex = 76;
+            this.Btn_MarsS.Text = "Mars Sortie";
+            this.Btn_MarsS.UseVisualStyleBackColor = true;
+            this.Btn_MarsS.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_MechT
+            // 
+            this.Btn_MechT.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_MechT.Location = new System.Drawing.Point(4, 60);
+            this.Btn_MechT.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_MechT.Name = "Btn_MechT";
+            this.Btn_MechT.Size = new System.Drawing.Size(118, 48);
+            this.Btn_MechT.TabIndex = 89;
+            this.Btn_MechT.Text = "Mecha Tornado Arcade";
+            this.Btn_MechT.UseVisualStyleBackColor = true;
+            this.Btn_MechT.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_MechD
+            // 
+            this.Btn_MechD.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_MechD.Location = new System.Drawing.Point(130, 60);
+            this.Btn_MechD.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_MechD.Name = "Btn_MechD";
+            this.Btn_MechD.Size = new System.Drawing.Size(118, 48);
+            this.Btn_MechD.TabIndex = 90;
+            this.Btn_MechD.Text = "Mechanical Dinosaur";
+            this.Btn_MechD.UseVisualStyleBackColor = true;
+            this.Btn_MechD.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_Mia
+            // 
+            this.Btn_Mia.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Mia.Location = new System.Drawing.Point(256, 60);
+            this.Btn_Mia.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Mia.Name = "Btn_Mia";
+            this.Btn_Mia.Size = new System.Drawing.Size(118, 48);
+            this.Btn_Mia.TabIndex = 78;
+            this.Btn_Mia.Text = "Mission Impossible";
+            this.Btn_Mia.UseVisualStyleBackColor = true;
+            this.Btn_Mia.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_Mib
+            // 
+            this.Btn_Mib.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Mib.Location = new System.Drawing.Point(382, 60);
+            this.Btn_Mib.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Mib.Name = "Btn_Mib";
+            this.Btn_Mib.Size = new System.Drawing.Size(118, 48);
+            this.Btn_Mib.TabIndex = 77;
+            this.Btn_Mib.Text = "M.I.B";
+            this.Btn_Mib.UseVisualStyleBackColor = true;
+            this.Btn_Mib.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_Nerfa
+            // 
+            this.Btn_Nerfa.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Nerfa.Location = new System.Drawing.Point(4, 116);
+            this.Btn_Nerfa.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Nerfa.Name = "Btn_Nerfa";
+            this.Btn_Nerfa.Size = new System.Drawing.Size(118, 48);
+            this.Btn_Nerfa.TabIndex = 79;
+            this.Btn_Nerfa.Text = "Nerf Arcade";
+            this.Btn_Nerfa.UseVisualStyleBackColor = true;
+            this.Btn_Nerfa.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_Nha
+            // 
+            this.Btn_Nha.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Nha.Location = new System.Drawing.Point(130, 116);
+            this.Btn_Nha.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Nha.Name = "Btn_Nha";
+            this.Btn_Nha.Size = new System.Drawing.Size(118, 48);
+            this.Btn_Nha.TabIndex = 80;
+            this.Btn_Nha.Text = "Night Hunter";
+            this.Btn_Nha.UseVisualStyleBackColor = true;
+            this.Btn_Nha.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_Owr
+            // 
+            this.Btn_Owr.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Owr.Location = new System.Drawing.Point(256, 116);
+            this.Btn_Owr.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Owr.Name = "Btn_Owr";
+            this.Btn_Owr.Size = new System.Drawing.Size(118, 48);
+            this.Btn_Owr.TabIndex = 81;
+            this.Btn_Owr.Text = "Operation Wolf\r\nReturn";
+            this.Btn_Owr.UseVisualStyleBackColor = true;
+            this.Btn_Owr.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_PvZ
+            // 
+            this.Btn_PvZ.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_PvZ.Location = new System.Drawing.Point(382, 116);
+            this.Btn_PvZ.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_PvZ.Name = "Btn_PvZ";
+            this.Btn_PvZ.Size = new System.Drawing.Size(118, 48);
+            this.Btn_PvZ.TabIndex = 82;
+            this.Btn_PvZ.Text = "Plant VS Zombies";
+            this.Btn_PvZ.UseVisualStyleBackColor = true;
+            this.Btn_PvZ.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_Pbx
+            // 
+            this.Btn_Pbx.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Pbx.Location = new System.Drawing.Point(4, 172);
+            this.Btn_Pbx.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Pbx.Name = "Btn_Pbx";
+            this.Btn_Pbx.Size = new System.Drawing.Size(118, 48);
+            this.Btn_Pbx.TabIndex = 85;
+            this.Btn_Pbx.Text = "Point Blank X";
+            this.Btn_Pbx.UseVisualStyleBackColor = true;
+            this.Btn_Pbx.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_Rha
+            // 
+            this.Btn_Rha.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Rha.Location = new System.Drawing.Point(130, 172);
+            this.Btn_Rha.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Rha.Name = "Btn_Rha";
+            this.Btn_Rha.Size = new System.Drawing.Size(118, 48);
+            this.Btn_Rha.TabIndex = 83;
+            this.Btn_Rha.Text = "Rabbids Hollywood";
+            this.Btn_Rha.UseVisualStyleBackColor = true;
+            this.Btn_Rha.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_Skos
+            // 
+            this.Btn_Skos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Skos.Location = new System.Drawing.Point(256, 172);
+            this.Btn_Skos.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Skos.Name = "Btn_Skos";
+            this.Btn_Skos.Size = new System.Drawing.Size(118, 48);
+            this.Btn_Skos.TabIndex = 87;
+            this.Btn_Skos.Text = "Skull Of Shadow";
+            this.Btn_Skos.UseVisualStyleBackColor = true;
+            this.Btn_Skos.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_Tra
+            // 
+            this.Btn_Tra.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Tra.Location = new System.Drawing.Point(382, 172);
+            this.Btn_Tra.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Tra.Name = "Btn_Tra";
+            this.Btn_Tra.Size = new System.Drawing.Size(118, 48);
+            this.Btn_Tra.TabIndex = 84;
+            this.Btn_Tra.Text = "Tomb Raider Arcade";
+            this.Btn_Tra.UseVisualStyleBackColor = true;
+            this.Btn_Tra.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // Btn_Wws
+            // 
+            this.Btn_Wws.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Wws.Location = new System.Drawing.Point(4, 228);
+            this.Btn_Wws.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Wws.Name = "Btn_Wws";
+            this.Btn_Wws.Size = new System.Drawing.Size(118, 48);
+            this.Btn_Wws.TabIndex = 86;
+            this.Btn_Wws.Text = "Wild West Shootout";
+            this.Btn_Wws.UseVisualStyleBackColor = true;
+            this.Btn_Wws.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(5, 19);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(196, 16);
+            this.label36.TabIndex = 70;
+            this.label36.Text = "Select the Unity Plugin to install :";
             // 
             // Tab_Outputs
             // 
@@ -2815,53 +2867,29 @@
             this.label39.TabIndex = 40;
             this.label39.Text = "Page selection :";
             // 
-            // flowLayoutPanel1
+            // Btn_DinoInv
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.Btn_Dcop);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_Drk);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_MarsS);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_MechT);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_MechD);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_Mia);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_Mib);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_Nerfa);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_Nha);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_Owr);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_PvZ);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_Pbx);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_Rha);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_Skos);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_Tra);
-            this.flowLayoutPanel1.Controls.Add(this.Btn_Wws);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 49);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(569, 278);
-            this.flowLayoutPanel1.TabIndex = 88;
+            this.Btn_DinoInv.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_DinoInv.Location = new System.Drawing.Point(130, 4);
+            this.Btn_DinoInv.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_DinoInv.Name = "Btn_DinoInv";
+            this.Btn_DinoInv.Size = new System.Drawing.Size(118, 48);
+            this.Btn_DinoInv.TabIndex = 91;
+            this.Btn_DinoInv.Text = "Dino Invasion";
+            this.Btn_DinoInv.UseVisualStyleBackColor = true;
+            this.Btn_DinoInv.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
             // 
-            // Btn_MechT
+            // Btn_Wisdom
             // 
-            this.Btn_MechT.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_MechT.Location = new System.Drawing.Point(382, 4);
-            this.Btn_MechT.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_MechT.Name = "Btn_MechT";
-            this.Btn_MechT.Size = new System.Drawing.Size(118, 48);
-            this.Btn_MechT.TabIndex = 89;
-            this.Btn_MechT.Text = "Mecha Tornado Arcade";
-            this.Btn_MechT.UseVisualStyleBackColor = true;
-            this.Btn_MechT.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
-            // 
-            // Btn_MechD
-            // 
-            this.Btn_MechD.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_MechD.Location = new System.Drawing.Point(4, 60);
-            this.Btn_MechD.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_MechD.Name = "Btn_MechD";
-            this.Btn_MechD.Size = new System.Drawing.Size(118, 48);
-            this.Btn_MechD.TabIndex = 90;
-            this.Btn_MechD.Text = "Mechanical Dinosaur";
-            this.Btn_MechD.UseVisualStyleBackColor = true;
-            this.Btn_MechD.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
+            this.Btn_Wisdom.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_Wisdom.Location = new System.Drawing.Point(130, 228);
+            this.Btn_Wisdom.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_Wisdom.Name = "Btn_Wisdom";
+            this.Btn_Wisdom.Size = new System.Drawing.Size(118, 48);
+            this.Btn_Wisdom.TabIndex = 92;
+            this.Btn_Wisdom.Text = "Wisdom Zombies";
+            this.Btn_Wisdom.UseVisualStyleBackColor = true;
+            this.Btn_Wisdom.Click += new System.EventHandler(this.Btn_InstallUnityPlugin_Click);
             // 
             // Wnd_DemulShooterGui
             // 
@@ -2942,12 +2970,12 @@
             this.Tab_SHA.PerformLayout();
             this.Tab_UnityPlugins.ResumeLayout(false);
             this.Tab_UnityPlugins.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.Tab_Outputs.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
             this.Grp_Outputs.ResumeLayout(false);
             this.Grp_Outputs.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3175,6 +3203,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button Btn_MechT;
         private System.Windows.Forms.Button Btn_MechD;
+        private System.Windows.Forms.Button Btn_DinoInv;
+        private System.Windows.Forms.Button Btn_Wisdom;
     }
 }
 

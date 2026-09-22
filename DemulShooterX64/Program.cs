@@ -51,6 +51,7 @@ namespace DemulShooterX64
             };
 
             Dictionary<String, String> _ArcadepcRoms = new Dictionary<String, String>(){
+                {"dino", "Dino Invasion"},
                 {"drk", "Drakon Realm Keepers"},
                 {"eai","Elevator Action invasion"},                
                 {"marss", "Mars Sortie"},
@@ -61,7 +62,8 @@ namespace DemulShooterX64
                 {"racramp", "Raccoon Rampage Arcade"},
                 {"rha", "Rabbids Hollywood Arcade"},
                 {"skullos", "Skull of Shadow"},
-                {"tra", "Tomb Raider Arcade"}      
+                {"tra", "Tomb Raider Arcade"},
+                {"wzombies", "Wisdom Zombies"}
             };
 
             Dictionary<String, String> _Es3Roms = new Dictionary<String, String>(){
