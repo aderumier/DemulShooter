@@ -37,7 +37,17 @@ namespace DsCore.RawInput
                     // On Window 8 64bit when compiling against .Net > 3.5 using .ToInt32 you will generate an arithmetic overflow. Leave as it is for 32bit/64bit applications
                     RawInputDeviceList rid = (RawInputDeviceList)Marshal.PtrToStructure(new IntPtr((pRawInputDeviceList.ToInt64() + (dwSize * i))), typeof(RawInputDeviceList));
 
-                    RawInputController controller = new RawInputController(rid.hDevice, rid.dwType);
+                    RawInputController controller;
+                    try
+                    {
+                        controller = new RawInputController(rid.hDevice, rid.dwType);
+                    }
+                    catch (Exception ex)
+                    {
+                        //One unreadable device must not prevent DemulShooter from starting
+                        Logger.WriteLog("GetRawInputDevices(): skipping device 0x" + rid.hDevice.ToString("X") + " : " + ex.Message);
+                        continue;
+                    }
 
                     foreach (RawInputDeviceType Type in AccecptedDeviceTypes)
                     {

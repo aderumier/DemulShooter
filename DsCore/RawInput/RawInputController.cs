@@ -815,10 +815,13 @@ namespace DsCore.RawInput
         /// <returns>Number of available input buttons for this HID device</returns>
         private int GetNumberOfHidDeviceButtons(IntPtr pPreparsedData, HidPButtonCaps[] pButtonCaps)
         {
-            if (_pPreparsedData != IntPtr.Zero)
-            {                
+            if (_pPreparsedData != IntPtr.Zero && pButtonCaps != null && pButtonCaps.Length > 0)
+            {
+                //Range fields are only valid when IsRange is set (Wine can report non-range button caps), otherwise it's a single usage
+                if (!pButtonCaps[0].IsRange)
+                    return 1;
                 int nButtons = pButtonCaps[0].Range.UsageMax - pButtonCaps[0].Range.UsageMin + 1;
-                return nButtons;
+                return Math.Max(nButtons, 0);
             }
             return 0;
         }
